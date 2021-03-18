@@ -20,7 +20,7 @@ def profile(request):
             messages.success(request, 'Profile updated succesfully')
         else:
             messages.error(request, 'Profile Failed to update, please check form')
-    else: 
+    else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
@@ -34,12 +34,11 @@ def profile(request):
     return render(request, template, context)
 
 
-@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
-        f'This is your last confirmation order number{ order_number}. '
+        f'This is your last confirmation order number{order_number}. '
         'A confirmation email was send on the order date.'
     ))
 
