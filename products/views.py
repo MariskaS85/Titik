@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm
+from .forms import ProductForm, CommentForm
 
 # Create your views here.
 
@@ -65,14 +65,26 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show all individual product details """
-
     product = get_object_or_404(Product, pk=product_id)
+    comments = product.comments.filter(active=True)
+    new_comment = None
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            # Assign the current post to the comment
+            new_comment.product = product
+            # Save the comment to the database
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
 
-    context = {
-        'product': product,
-    }
-
-    return render(request, 'products/product_detail.html', context)
+    return render(request, 'products/product_detail.html', {'product': product,
+                                                            'comments': comments,
+                                                            'new_comment': new_comment,
+                                                            'comment_form': comment_form
+                                                            })
 
 
 @login_required
