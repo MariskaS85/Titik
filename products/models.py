@@ -7,13 +7,13 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, null=True)
-
-    def get_friendy_name(self):
-        return self.friendly_name
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
 
 
 # this shows the labels in the django admin
@@ -34,8 +34,8 @@ class Product(models.Model):
 
 
 class Comment(models.Model):
-    product = models.ForeignKey('product', on_delete=models.CASCADE, 
-                             related_name='comments')
+    product = models.ForeignKey('product', on_delete=models.CASCADE,
+                                related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()

@@ -109,7 +109,7 @@
                 </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="write-container mb-5 mt-md-5 mx-auto">
-                    {% if request.is_user %}
+                    {% if request.user.is_authenticated %}
                         {% if new_comment %}
                             <div class="alert alert-success text-uppercase mt-5" role="alert">
                                 Thank you for your review of {{ product.category.friendly_name }}
@@ -124,7 +124,7 @@
                         {% endif %}
                     {% else %}
                         <div class="bg-secondary text-white text-uppercase" role="alert">
-                            <p> You need to be logged in to write a comment</p> 
+                            <p class="p-3"> You need to be logged in to write a comment</p> 
                         </div>
                     {% endif %}
                     </div>

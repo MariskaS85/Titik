@@ -87,3 +87,4 @@ The main font i have been using is the 'Oswald' and during one of my distraction
 http://sansoxygen.com/
 
 https://www.geeksforgeeks.org/try-except-vs-if-in-python/
+https://www.tutorialrepublic.com/faq/how-to-launch-bootstrap-modal-on-page-load.php
