@@ -28,7 +28,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Update!</h2>
+                <h2 class="modal-title text-justify">Update!</h2>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -39,7 +39,7 @@
                 <h4 class="logo-font p-3">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
             </div>
                 <!-- 
-                    <form>
+                <form>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Name">
                     </div>
@@ -57,14 +57,14 @@
 {% block postloadjs %}
 <script type="text/javascript">
     $(document).ready(function(){
-    if (document.cookie.indexOf('modal_shown=') >= 0) {
-    //do nothing if modal_shown cookie is present
+        if (document.cookie.indexOf('modal_shown=') >= 0) {
+        //do nothing if modal_shown cookie is present
     } 
-    else {
-    $("#myModal").modal('show');  //show modal pop up
-    document.cookie = "modal_shown=seen"; //set cookie modal_shown
-    //cookie will expire when browser is closed
-    }     
+        else {
+        $("#myModal").modal('show');  //show modal pop up
+        document.cookie = "modal_shown=seen"; //set cookie modal_shown
+        //cookie will expire when browser is closed
+        }     
     });
 </script>
 {% endblock %}

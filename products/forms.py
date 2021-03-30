@@ -17,6 +17,7 @@ class ProductForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
+        size = Size.objects.all()
 
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():

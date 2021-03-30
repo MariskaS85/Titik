@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, Comment
+from .models import Product, Category, Comment, Size
 
 # Register your models here
 # which categories to display
@@ -23,6 +23,14 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+
+class SizeAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+        'dimension',
+        'size',
+    )
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
