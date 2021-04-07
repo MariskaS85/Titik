@@ -28,20 +28,29 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                    {% if product.category %}
+                    <h2 class="mb-1 font-weight-bold text-white">{{ product.name }}</h2>
+                    <p class="lead mb-1 text-left font-weight-bold">${{ product.price }}</p>
+                   <!-- {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a href="{% url 'products' %}?category={{ products.category.name }}" class="text-muted">
                             <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                         </a>
                     </p>
+                    -->
+                    {% endif %}
+                    <p class="mt-3"><strong>Size:</strong></p>
+                    {% if product.size %}
+                  
+                        <p class="mt-3">{{ product.size.dimension }}</p>
+                    {% else %}
+                        <p class="mt-3"> No Size</p>
                     {% endif %}
                     {% if request.user.is_superuser %}
                         <small class="ml-3"></small>
                             <a href="{% url 'edit_product' product.id %}">Edit</a> |
                             <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>    
                     {% endif %}
+                    <p class="mt-3"><strong>Description:</strong></p>
                     <p class="mt-3">{{ product.description }}</p>
                         <!-- form below is quantity button and keep shopping button-->
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">

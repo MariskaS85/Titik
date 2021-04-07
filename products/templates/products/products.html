@@ -72,12 +72,12 @@
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a href="{% url 'products' %}?category={{ products.category.name }}" class="text-muted">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                    <i class="fas fa-tag mr-1"></i>Material: {{ product.category.friendly_name }}
                                                 </a>
                                             </p>
                                             {% endif %}
                                             {% if product.size %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>The size is {{ product.size }} out of 3</small>
+                                                <small class="text-muted"><i class="fas fa-arrows-alt"></i> Size: {{ product.size.friendly_name }}</small>
                                             {% else %}
                                                 <small class="text-muted"> No Size</small>
                                             {% endif %}
