@@ -13,7 +13,7 @@
         </li>
 
         <li class="nav-item dropdown bg-dark">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="wall-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=canvas,diptych_canvas,wood,diptych_wood,aluminium,diptych_aluminium,plexiglass,diptych_plexiglass" id="wall-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Wall decoration
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="wall-link">
@@ -26,7 +26,7 @@
         </li>
 
         <li class="nav-item dropdown bg-dark">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="objects-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}?category=objects,Specials,diptych_canvas,diptych_wood,diptych_plexiglass" id="objects-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Specials
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="objects-link">
@@ -34,6 +34,11 @@
                 <a href="{% url 'products' %}?category=diptych_canvas,diptych_wood,diptych_plexiglass" class="dropdown-item">Diptych</a>
                 <a href="{% url 'products' %}?category=objects,Specials,diptych_canvas,diptych_wood,diptych_plexiglass" class="dropdown-item">All objects</a>
             </div>
+        </li>
+        <li>
+             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#about" id="about">
+                About
+            </a>
         </li>
     </ul>
 </div>

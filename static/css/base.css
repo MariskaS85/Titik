@@ -18,6 +18,14 @@ body {
     background: #212529;
     z-index: -1;
 }
+.carousel-item {
+  background: no-repeat center center fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .btn-btn {
     height: 35px;
@@ -55,15 +63,14 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
+.shop-button {
     background: #212529;
     color: white;
-    min-width: 260px;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.shop-button:hover,
+.shop-button:active,
+.shop-button:focus,
 .btn-gray:hover,
 .btn-gray:active,
 .btn-gray:focus {

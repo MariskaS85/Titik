@@ -26,7 +26,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     size = models.ForeignKey('Size', null=True,
-                                 on_delete=models.SET_NULL)
+                             on_delete=models.SET_NULL)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
