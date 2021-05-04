@@ -12,7 +12,8 @@
 {% block content %}
 
 <div class="overlay"></div>
-    <div id="carouselIndicators px-1 m-0" class="carousel slide carousel-fade pb-4" data-ride="carousel">
+<div class="top d-block d-lg-none d-xl-none"></div>
+    <div id="carouselIndicators" class="px-2 py-2 m-0 carousel slide carousel-fade " data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselIndicators" data-slide-to="1"></li>
@@ -20,21 +21,30 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item text-center active">
-                <img class= "col-xs-12 col-md-6" src="/media/vierkant_zwart.png" alt="Canvas square">
+                <div class="carousel-text">
+                      <h2 class="text-white"><small>New tech enables you</small></h2>
+                </div>
+                <img class= "col-xs-12 col-md-6" src="/media/vierkant_zwart_l.png" alt="Canvas square">
                 <div class="carousel-caption d-none d-md-block m-0 p-0">
-                    <h1 class="card-title text-center m-0 p-0"><a href="{% url 'products' %}?category=canvas,diptych_canvas" class="text-white btn rounded-0 p-0">Canvas</a></h1>
+                    <h1 class="card-title text-center m-0 p-0"><a href="{% url 'products' %}?category=canvas,diptych_canvas" class="text-white btn rounded-0 p-2">Canvas</a></h1>
                 </div>
             </div>
             <div class="carousel-item text-center">
-                <img class= "col-xs-12 col-md-6" src="/media/vierkant_hout.png" alt="Wood square">
+                <div class="carousel-text">
+                      <h2 class="text-white"><small>to customize your art</small></h2>
+                </div>
+                <img class= "col-xs-12 col-md-6" src="/media/vierkant_hout_l.png" alt="Wood square">
                 <div class="carousel-caption d-none d-md-block m-0 p-0">
-                     <h1 class="card-title text-center m-0 p-0"><a href="{% url 'products' %}?category=wood,diptych_wood" class="text-white btn rounded-0 p-0">Wood</a></h1>
+                     <h1 class="card-title text-center m-0 p-0"><a href="{% url 'products' %}?category=wood,diptych_wood" class="text-white btn rounded-0 p-2">Wood</a></h1>
                 </div>
             </div>
             <div class="carousel-item text-center">
-                <img class= "col-xs-12 col-md-6" src="/media/vierkant_grijs.png" alt="Aluminium Square">
+                <div class="carousel-text">
+                      <h2 class="text-white"><small>to your own face!</small></h2>
+                </div>
+                <img class= "col-xs-12 col-md-6" src="/media/vierkant_grijs_l.png" alt="Aluminium Square">
                 <div class="carousel-caption d-none d-md-block m-0 p-0">
-                    <h1 class="card-title text-center m-0 p-0"><a href="{% url 'products' %}?category=aluminium,diptych_aluminium" class="text-white btn rounded-0 p-0">Aluminium</a></h1>
+                    <h1 class="card-title text-center m-0 p-0"><a href="{% url 'products' %}?category=aluminium,diptych_aluminium" class="text-white btn rounded-0 p-2">Aluminium</a></h1>
                 </div>
             </div>
         </div>
@@ -47,58 +57,72 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <div class="bottom py-3"></div>
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="card p-auto bg-dark text-white rounded-0 border border-dark">
                     <div class="card-body">
                         <h1 class="card-title text-center"><a href="{% url 'products' %}?category=canvas,diptych_canvas" class="shop-button btn btn-lg rounded-0 text-uppercase py-1">Canvas</a></h1>
+                        <img class="card-img-top py-4" src="/media/vierkant_zwart.png" alt="Canvas Square">
+                        <div class="row">
+                            <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=canvas" class="shop-button btn btn-lg rounded-0 text-lowercase">Square</a></h4>
+                            <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=diptych_canvas" class="shop-button btn btn-lg rounded-0 text-lowercase">Diptych</a></h4> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-auto bg-dark text-white rounded-0 border border-dark">
+                    <div class="card-body">
+                        <h1 class="card-title text-center"><a href="{% url 'products' %}?category=canvas,diptych_canvas" class="shop-button btn btn-lg rounded-0 text-uppercase py-1">Canvas</a></h1>
                         <img class="card-img-top py-4" src="/media/vierkant_zwart.png" alt="Canvas square">
-                        <div class="row px-auto">
+                        <div class="row">
                             <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=canvas" class="shop-button btn btn-lg rounded-0 text-lowercase">Square</a></h4> 
                             <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=diptych_canvas" class="shop-button btn btn-lg rounded-0 text-lowercase">Diptych</a></h4>
                         </div>
                     </div>
                 </div>
             </div>
-        <div class="col">
-            <div class="card p-auto bg-dark text-white rounded-0 border border-dark">
-                <div class="card-body">
-                    <h1 class="card-title text-center"><a href="{% url 'products' %}?category=wood,diptych_wood" class="shop-button btn btn-lg rounded-0 text-uppercase py-1">Wood</a></h1>
+            <div class="col">
+                <div class="card p-auto bg-dark text-white rounded-0 border border-dark">
+                    <div class="card-body">
+                        <h1 class="card-title text-center"><a href="{% url 'products' %}?category=wood,diptych_wood" class="shop-button btn btn-lg rounded-0 text-uppercase py-1">Wood</a></h1>
                         <img class="card-img-top py-4" src="/media/vierkant_hout.png" alt="Wood square">
-                        <div class="row px-auto">
-                        <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=wood" class="shop-button btn btn-lg rounded-0 text-lowercase">Square</a></h4>
-                        <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=diptych_wood" class="shop-button btn btn-lg rounded-0 text-lowercase">Diptych</a></h4> 
+                        <div class="row">
+                            <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=wood" class="shop-button btn btn-lg rounded-0 text-lowercase">Square</a></h4>
+                            <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=diptych_wood" class="shop-button btn btn-lg rounded-0 text-lowercase">Diptych</a></h4> 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card p-auto bg-dark text-white rounded-0 border border-dark">
-                <div class="card-body">
-                    <h1 class="card-title text-center"><a href="{% url 'products' %}?category=aluminium,diptych_aluminium" class="shop-button btn btn-lg rounded-0 text-uppercase py-1">Aluminium</a></h1>
-                    <img class="card-img-top py-4" src="/media/vierkant_grijs.png" alt="Aluminium Square">
-                    <div class="row">
-                        <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=aluminium" class="shop-button btn btn-lg rounded-0 text-lowercase">Square</a></h4>
-                        <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=diptych_aluminium" class="shop-button btn btn-lg rounded-0 text-lowercase">Diptych</a></h4> 
+            <div class="col">
+                <div class="card p-auto bg-dark text-white rounded-0 border border-dark">
+                    <div class="card-body">
+                        <h1 class="card-title text-center"><a href="{% url 'products' %}?category=aluminium,diptych_aluminium" class="shop-button btn btn-lg rounded-0 text-uppercase py-1">Aluminium</a></h1>
+                        <img class="card-img-top py-4" src="/media/vierkant_grijs.png" alt="Aluminium Square">
+                        <div class="row">
+                            <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=aluminium" class="shop-button btn btn-lg rounded-0 text-lowercase">Square</a></h4>
+                            <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=diptych_aluminium" class="shop-button btn btn-lg rounded-0 text-lowercase">Diptych</a></h4> 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-         <div class="col">
-            <div class="card p-auto bg-dark text-white rounded-0 border border-dark">
-                <div class="card-body">
-                    <h1 class="card-title text-center"><a href="{% url 'products' %}?category=plexiglass,diptych_plexiglass" class="shop-button btn btn-lg rounded-0 text-uppercase py-1">Plexiglass</a></h1>
-                    <img class="card-img-top py-4" src="/media/vierkant_grijs.png" alt="Plexiglass Square">
-                    <div class="row">
-                        <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=plexiglass" class="shop-button btn btn-lg rounded-0 text-lowercase">Square</a></h4>
-                        <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=diptych_plexiglass" class="shop-button btn btn-lg rounded-0 text-lowercase">Diptych</a></h4> 
+            <div class="col">
+                <div class="card p-auto bg-dark text-white rounded-0 border border-dark">
+                    <div class="card-body">
+                        <h1 class="card-title text-center"><a href="{% url 'products' %}?category=plexiglass,diptych_plexiglass" class="shop-button btn btn-lg rounded-0 text-uppercase py-1">Plexiglass</a></h1>
+                        <img class="card-img-top py-4" src="/media/vierkant_grijs.png" alt="Plexiglass Square">
+                        <div class="row">
+                            <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=plexiglass" class="shop-button btn btn-lg rounded-0 text-lowercase">Square</a></h4>
+                            <h4 class="col-6 p-1 text-center"><a href="{% url 'products' %}?category=diptych_plexiglass" class="shop-button btn btn-lg rounded-0 text-lowercase">Diptych</a></h4> 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 <!-- 
         <div class="container h-100">
         <div class="row h-100">

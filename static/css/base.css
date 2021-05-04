@@ -18,6 +18,19 @@ body {
     background: #212529;
     z-index: -1;
 }
+.top {
+    height: 100px;
+    width: 100%;
+}
+
+.bottom {
+    height: 50px;
+    width: 100%;
+}
+.button-menu-border {
+    width: 3px;
+}
+
 .carousel-item {
   background: no-repeat center center fixed;
   background-position: center;

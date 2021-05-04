@@ -7,8 +7,8 @@ def index(request):
 
     return render(request, 'home/index.html')
 
-def productIndex(request):
 
+def productIndex(request):
 
     context = {
         'products': products,
