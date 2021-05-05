@@ -27,6 +27,11 @@ body {
     height: 50px;
     width: 100%;
 }
+.middle {
+    height: 3px;
+    width: 100%;
+    background-color: #212529;
+}
 .button-menu-border {
     width: 3px;
 }

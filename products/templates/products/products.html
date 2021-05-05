@@ -13,7 +13,7 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col text-center mt-5">
+            <div class="col text-center mt-4">
                 <h2 class="logo-font">Products</h2>
                 {% for c in current_categories %}                
                     <a href="{% url 'products' %}? category={{ c.name }}" class="category-badge text-decoration-none">
@@ -27,7 +27,7 @@
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                     <div class="col-12 my-auto order-md-last d-flex justify-content-center">
-                        <div class="sort-select-wrapper w-25">
+                        <div class="sort-select-wrapper w-xl-25 w-lg-25 w-md-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}> Sort by ...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}> Price (low to high)</option>
