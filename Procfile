@@ -1,1 +1,1 @@
-web: gunicorn titik.wsgi:application
+web: gunicorn titik_ms4.wsgi:application
