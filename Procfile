@@ -1,1 +1,1 @@
-web: gunicorn titik-faceart.wsgi:application
+web: gunicorn titik.wsgi:application
