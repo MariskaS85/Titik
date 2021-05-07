@@ -181,7 +181,7 @@ print(f"MEDIA ROOT: {MEDIA_ROOT}")
 if 'USE_AWS' in os.environ:
     # Cache Control
     AWS_S3_OBJECT_PARAMETERS = {
-        'Expires': 'Thu, 31 Dex 2099 20:00:00 GMT',
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControle': 'max-age=94608000',
     }
     # Bucket configuration
