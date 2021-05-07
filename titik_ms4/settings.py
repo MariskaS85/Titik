@@ -122,7 +122,7 @@ WSGI_APPLICATION = 'titik_ms4.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('postgres://ykylseqmydqemp:09ca23abc74a7f0cf0b8cad3b6d91505bec2919c69d4572aaa7d1d28b4de28bd@ec2-79-125-30-28.eu-west-1.compute.amazonaws.com:5432/d36h9qda2dijmp')),
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
     }
 else:
     DATABASES = {
