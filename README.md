@@ -1,12 +1,12 @@
 
 # FaceArt
-One of the main goals of the website is to give people an idea of using technology as art. The primary goal of the website is to show products people can buy when using their own facial landmarks as a painting. This is the first version and will be a fist step in integrating an automated facial analysis module to antomate the production of Personalized portraits using facial landmarks.
+One of the main goals of the website is to give people an idea of using technology as art. The primary goal of the website is to show products people can buy when using their own facial landmarks as a painting. This is the first version and will be a first step in integrating an automated facial analysis module to automate the production of Personalized portraits using facial landmarks.
 
 
 ## UX
 The main layout is taken form the Boutique Ado project from Code Institute. It has been adjusted for this current project. Mainly the color scheme used is dark, this to enhance the mystery around the technology used and the creation of anonimity with the use of facial landmarks for portraits.
 
-The reason to use the template of Code Institute is that Code Insitute has a long history of trail and error, and thus should come uop with the most efficient lay out of the webshop. 
+The reason to use the template of Code Institute is that Code Insitute has a long history of trail and error, and thus should come up with the most efficient lay out of the webshop. 
 
 The Landing page is a common image of a landmarked face and should give people an idea of what their wall decoration would look like in close-up.
 
@@ -33,40 +33,50 @@ User story ID	|  As an/a	|  I want to be able to…	|  So that I can…
 16	|Paying client|	know if all payments were done correctly|	So i feel safe that the payments are transfered correctly
 
 # Features
-The first part is the productspage. Here you can find all products. When clicking on different categories in the manu you can select products you are interesed in. There are three different sizes for the wall decorations. Small Medium and Large. In addition there are four different materials you can choose from: Canvas, Wood, Aluminium and Plexiglass.
+The first part is the productspage. Here you can find all products. When clicking on different categories in the menu you can select products you are interesed in. There are three different sizes for the wall decorations. Small Medium and Large. In addition there are four different materials you can choose from: Canvas, Wood, Aluminium and Plexiglass.
 
-The images give you a nice idea of the size of the image. 
+The images give you a nice idea of the size compared to a living room.
 
-In addition to the you can also buy a cup and a glass with facial landmarks engraved. The specials are two different faces combined into a diptych also possible in the materrials above and differnt sizes.
+In addition to the wall decorations you can also buy a cup and a glass with facial landmarks engraved. The specials are two different faces combined into a diptych also possible in the materials above and differnt sizes.
 
-Current users can login and create an account, see their past orders and their profile information. 
+Current users can login and create an account, see their past orders and their profile information.
+
+In previous versions of the Project the index page was a example painting with the text 'Shop New Tech' on it. I have decided to change this so people would have a better understanding of the product, instead of just a overview in a random livingroom.
 
 # Features left to Implement
 The next main implementation would be letting customers upload their image to be analyzed to get an idea what their face would look like on the products ordered.
 
 ## Technology used
 * HTML5
-* CSS
-* Bootstrap
+* CSS3
+* Bootstrap4
 * JavaScript
-* Python
+* Python3
 * JSON
 
 # Used Plaforms
 * Coding: GitHub/GitPod
 * Fonts: Google Fonts
-* Icons: Font Awsome
+* Icons: Font Awesome
 * Payments: Stripe
-* Media hosting: Amazon Webservices
+* Media hosting: Amazon Web Services
 * Deployment: Heroku
 
 # Testing
-As can be seen in the app, testing was not done properly at the end. During the whole developement tests were done to see if everything worked smoothly. Due to time bigger issues were wriiten down and smaller issues were fixed. Bigger issues involved not being to connect to Stripe and AWS. This apparently was caused by an issue in Gitpod with not remembering the KEYS. 
+During the whole period of development the site was tested. after deployment it was tested using Lighthouse, you can find the outcome of this report below:
+
+Device| Performance	|  Accessibility	| Best Practice	|  SEO
+------------ | ------------- | ------------ | ------------- 
+Mobile  | 75	| 89 |	100 |	92
+Computer  | 92	| 89 |	100 |	90
 
 # Deployment
-All coding was done in GitPod and commited to GitHub. After this the deployment was done on HEROKU, with the media files and static files stored on AMAZON WEB SERVICES. 
+All coding was done in GitPod and commited to GitHub. After this the deployment was done on HEROKU, with the media files and static files stored on AMAZON WEB SERVICES.
 
-## settings
+Deployment was a pain. Since it was a cloned verion of the original, a zip file was put instead of a Project folder. This cause the commits and pushes of any change in the project folder not go to GitHub. During testing this didn't cause any trouble, since it is all stored at Gitpod, however, this did caused trouble during deployment. Eventually a different file was made, and all references were changed to that file. Commits were done and Folders were read.
+And all was deployed well.
+
+## Settings
 - Path routing is defined 
 - Debug is still set on True
 - Secret key setting is defines for Django
@@ -75,16 +85,20 @@ All coding was done in GitPod and commited to GitHub. After this the deployment 
 - Crispy forms is defined
 - Templates are defined including Crispy
 - User settings are defined, including email  verification
-- DJ database is used if database is set in environment, if not use Django datebase
+- DJ database is used if database is set in environment, if not use Django database
 - Password validators are set
 - Location settings are set, currently set on Europe
 - Database location of static files and Media files are set
 - Stripe Settings are initiated.
 
 # Extra
-The main font i have been using is the 'Oswald' and during one of my distraction i came accross the website of the designer of the font, Vernon Adams, who died on August 24 2016. Even though Vernon designed a lot of the Fonts we use today his family doesn't receive (financial support). Therefore a 
+The main font I have been using is the 'Oswald' and during one of my distraction I came accross the website of the designer of the font, Vernon Adams, who died on August 24 2016. Even though Vernon designed a lot of the Fonts we use today his family doesn't receive (financial support).
 
 http://sansoxygen.com/
+
+# Personal Note
+
+This is my own project, eversince i've woked for a Computer Vision company i wanted to have a landmarked portrait. Code Insiti=ute has given me the option to create this. And all support have been so very very nice, tutors, Student Care and Mentors. Thank you!!
 
 https://www.geeksforgeeks.org/try-except-vs-if-in-python/
 https://www.tutorialrepublic.com/faq/how-to-launch-bootstrap-modal-on-page-load.php
