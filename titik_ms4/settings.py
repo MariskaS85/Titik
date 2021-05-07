@@ -179,6 +179,12 @@ print(f"STATIC DIRS: {STATICFILES_DIRS}")
 print(f"MEDIA ROOT: {MEDIA_ROOT}")
 
 if 'USE_AWS' in os.environ:
+    # Cache Control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dex 2099 20:00:00 GMT',
+        'CacheControle': 'max-age=94608000',
+    }
+    
     # Bucket configuration
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_REGION_NAME = 'eu-west-1'
