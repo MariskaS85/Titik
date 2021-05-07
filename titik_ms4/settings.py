@@ -173,10 +173,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 print(f"STATIC DIRS: {STATICFILES_DIRS}")
-print(f"MEDIA ROOT: {MEDIA_ROOT}/")
+print(f"MEDIA ROOT: {MEDIA_ROOT}")
 
 if 'USE_AWS' in os.environ:
     # Cache Control
@@ -195,11 +195,11 @@ if 'USE_AWS' in os.environ:
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-    MEDIAFILES_LOCATION = 'media/'
+    MEDIAFILES_LOCATION = 'media'
 
     # Override static and media URL's in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}'
-    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
 
 
 # Stripe
